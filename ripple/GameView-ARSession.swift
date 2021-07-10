@@ -16,13 +16,14 @@ extension GameView: ARSessionDelegate {
    
    func setupSessionDelegate() {
       
-      self.session = self.session
+      session.delegate = self
       
+   
    }
    
    func session(_ session: ARSession, didUpdate frame: ARFrame) {
-      print("arsession did update")
-   
+//      print("arsession did update")
+//      print(virtualController?.controller?.)
    }
    
    func session(_ session: ARSession, didAdd anchors: [ARAnchor]) {

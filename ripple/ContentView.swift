@@ -44,11 +44,13 @@ struct ARViewContainer: UIViewRepresentable {
       
       let arView = GameView(frame: .zero, cameraMode: .ar, automaticallyConfigureSession: false)
 
-
+      
       
       arView.configureWorldTracking()
       arView.setDebugSettings()
       arView.addGameController()
+      arView.addControllerNotifications()
+      arView.setupSessionDelegate()
          
 
       //       arView.scene.findEntity(named: <#T##String#>)

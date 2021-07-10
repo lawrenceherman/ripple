@@ -15,9 +15,10 @@
 		FE33259E26912A0800D2F214 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE33259D26912A0800D2F214 /* Preview Assets.xcassets */; };
 		FE3325A6269202C000D2F214 /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE3325A5269202C000D2F214 /* GameController.framework */; };
 		FE3325E42693A30400D2F214 /* HostingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3325E32693A30400D2F214 /* HostingVC.swift */; };
-		FE3326432694EB6700D2F214 /* GameView-ARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3326422694EB6700D2F214 /* GameView-ARView.swift */; };
+		FE3326432694EB6700D2F214 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3326422694EB6700D2F214 /* GameView.swift */; };
 		FE3326612694F6EE00D2F214 /* GameView-Coaching.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3326602694F6EE00D2F214 /* GameView-Coaching.swift */; };
 		FE3326652694F90400D2F214 /* GameView-ARSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3326642694F90400D2F214 /* GameView-ARSession.swift */; };
+		FE37D2E72699B42F00B45EEE /* GameView-Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE37D2E62699B42F00B45EEE /* GameView-Controller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,9 +32,10 @@
 		FE3325A5269202C000D2F214 /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = System/Library/Frameworks/GameController.framework; sourceTree = SDKROOT; };
 		FE3325A7269202C000D2F214 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		FE3325E32693A30400D2F214 /* HostingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingVC.swift; sourceTree = "<group>"; };
-		FE3326422694EB6700D2F214 /* GameView-ARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameView-ARView.swift"; sourceTree = "<group>"; };
+		FE3326422694EB6700D2F214 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		FE3326602694F6EE00D2F214 /* GameView-Coaching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameView-Coaching.swift"; sourceTree = "<group>"; };
 		FE3326642694F90400D2F214 /* GameView-ARSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameView-ARSession.swift"; sourceTree = "<group>"; };
+		FE37D2E62699B42F00B45EEE /* GameView-Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameView-Controller.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +77,8 @@
 				FE33259826912A0600D2F214 /* Experience.rcproject */,
 				FE33259A26912A0800D2F214 /* Assets.xcassets */,
 				FE33259C26912A0800D2F214 /* Preview Content */,
-				FE3326422694EB6700D2F214 /* GameView-ARView.swift */,
+				FE3326422694EB6700D2F214 /* GameView.swift */,
+				FE37D2E62699B42F00B45EEE /* GameView-Controller.swift */,
 				FE3326602694F6EE00D2F214 /* GameView-Coaching.swift */,
 				FE3326642694F90400D2F214 /* GameView-ARSession.swift */,
 				FE2937962697CB5D00E3F9D2 /* Notes.swift */,
@@ -169,12 +172,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE37D2E72699B42F00B45EEE /* GameView-Controller.swift in Sources */,
 				FE3326652694F90400D2F214 /* GameView-ARSession.swift in Sources */,
 				FE3325E42693A30400D2F214 /* HostingVC.swift in Sources */,
 				FE3326612694F6EE00D2F214 /* GameView-Coaching.swift in Sources */,
 				FE33259726912A0600D2F214 /* ContentView.swift in Sources */,
 				FE33259526912A0600D2F214 /* AppDelegate.swift in Sources */,
-				FE3326432694EB6700D2F214 /* GameView-ARView.swift in Sources */,
+				FE3326432694EB6700D2F214 /* GameView.swift in Sources */,
 				FE33259926912A0600D2F214 /* Experience.rcproject in Sources */,
 				FE2937972697CB5D00E3F9D2 /* Notes.swift in Sources */,
 			);
