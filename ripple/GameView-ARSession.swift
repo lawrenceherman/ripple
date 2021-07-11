@@ -15,15 +15,11 @@ extension GameView: ARSessionDelegate {
    // session delegate
    
    func setupSessionDelegate() {
-      
       session.delegate = self
-      
-   
    }
    
    func session(_ session: ARSession, didUpdate frame: ARFrame) {
-//      print("arsession did update")
-//      print(virtualController?.controller?.)
+//      print(frame.debugDescription)
    }
    
    func session(_ session: ARSession, didAdd anchors: [ARAnchor]) {
@@ -43,10 +39,12 @@ extension GameView: ARSessionDelegate {
    /////// session observer
    
    func session(_ session: ARSession, cameraDidChangeTrackingState camera: ARCamera) {
-      
+      print(camera.transform)
    }
    
-   func session(_ session: ARSession, didFailWithError error: Error) {
+
+
+func session(_ session: ARSession, didFailWithError error: Error) {
       print("arsession didFail")
    }
    

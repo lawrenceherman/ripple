@@ -12,29 +12,24 @@ import GameController
 extension GameView {
    
    
-   
-   
 func addGameController() {
    
    let virtualConfiguration = GCVirtualControllerConfiguration()
    
-   virtualConfiguration.elements = [GCInputDirectionPad, GCInputButtonHome, GCInputButtonMenu, GCInputRightThumbstick, GCInputButtonA, GCInputButtonB, GCInputButtonOptions]
+   virtualConfiguration.elements = [GCInputLeftThumbstick, GCInputRightThumbstick, GCInputButtonA, GCInputButtonB]
 
-
+   // whats up with these no uI becomes visible
+//   GCInputButtonMenu, GCInputButtonOptions, GCInputButtonHome
+  // GCInputLeftThumbstickButton  L3?
+  
    virtualController = GCVirtualController(configuration: virtualConfiguration)
    
    virtualController?.connect { [self] error in
       if error == nil { print("error nill")}
    }
-      
 
-   
-   
-   
-   
 }
    
-
 
 func addControllerNotifications() {
    NotificationCenter.default.addObserver(forName: NSNotification.Name.GCControllerDidConnect, object: nil, queue: nil) { (note) in
@@ -43,7 +38,6 @@ func addControllerNotifications() {
       guard let _controller = note.object! as? GCController else { return }
       
 //      _controller.controller?.extendedGamepad?.valueChangedHandler! {}
-      
       
       
       let movementHandler: GCControllerDirectionPadValueChangedHandler = { [unowned self] _, xValue, yValue in
@@ -60,35 +54,25 @@ func addControllerNotifications() {
       
       let gcInputRightThumbstickHandler: GCControllerDirectionPadValueChangedHandler = {x, y, z
          in
+      
+         self.sphereEntity.position = SIMD3(x: y, y: z, z: -0.1)
+         
          print(x)
          print(y)
          print(z)
       }
       
-      // wont work
-//      let gcInputButtonAHandler: GCControllerButtonTouchedChangedHandler = {
-//         w,x,y,z
-//         in
-//         print(w)
-//         print(x)
-//         print(y)
-//         print(z)
-//
-//      }
 
       _controller.extendedGamepad?.dpad.valueChangedHandler = movementHandler
-      _controller.extendedGamepad?.buttonA.valueChangedHandler = gcInputButtonAHandler
+      _controller.extendedGamepad?.leftThumbstickButton?.valueChangedHandler = gcInputButtonAHandler
+      
       _controller.extendedGamepad?.rightThumbstick.valueChangedHandler = gcInputRightThumbstickHandler
       
       print ("notification center GCcontroller did connect")
       print(note.object.debugDescription)
       
     
-    
-      
-      
-      
-      
+ 
       
    }
    
